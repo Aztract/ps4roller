@@ -1,240 +1,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 /* ==========================================
-   UNPHASED PS4 SKIN - EXACT MODEL COLORWAY
+   UNPHASED PS4 SKIN - FORCE OVERRIDES
    ========================================== */
 
-/* Controller Container */
-.controller.playstation-4 {
+/* Target any variation of the PS4 controller container */
+.controller.playstation-4,
+.controller.ds4,
+.controller.ps4,
+[class*="controller"][class*="ps"],
+[class*="controller"][class*="ds"] {
     background: transparent !important;
-    width: 800px;
-    height: 500px;
-    position: relative;
+    width: 800px !important;
+    height: 500px !important;
+    position: relative !important;
 }
 
-/* Base Body Shell mapping */
-.controller.playstation-4 .base {
+/* Force Base Body Shell */
+.controller .base,
+.controller [class*="base"],
+[class*="controller"] [class*="base"] {
     background-image: url('assets/body.svg') !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
 }
 
-/* Touchpad & Integrated Logo */
-.controller.playstation-4 .touchpad {
+/* Force Touchpad & Integrated Logo */
+.controller .touchpad,
+.controller [class*="touchpad"],
+[class*="controller"] [class*="touchpad"] {
     background-image: url('assets/touchpad.svg') !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 270px;
-    height: 130px;
-    position: absolute;
-    top: 102px;
-    left: 265px;
-    z-index: 5;
-    transition: filter 0.15s ease, opacity 0.15s ease;
-    filter: drop-shadow(0 0 5px rgba(255, 55, 0, 0.3));
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 270px !important;
+    height: 130px !important;
+    position: absolute !important;
+    top: 102px !important;
+    left: 265px !important;
+    z-index: 5 !important;
+    opacity: 1 !important;
+    transition: filter 0.15s ease, opacity 0.15s ease !important;
+    filter: drop-shadow(0 0 5px rgba(255, 55, 0, 0.3)) !important;
 }
 
-/* Glowing active state when touchpad is utilized */
-.controller.playstation-4 .touchpad.active {
-    filter: drop-shadow(0 0 18px rgba(255, 234, 0, 0.95));
-    opacity: 0.95;
+.controller .touchpad.active,
+[class*="controller"] [class*="touchpad"].active {
+    filter: drop-shadow(0 0 18px rgba(255, 234, 0, 0.95)) !important;
+    opacity: 0.95 !important;
 }
 
-/* Matte-Black Analog Sticks */
-.controller.playstation-4 .stick {
+/* Force Matte-Black Analog Sticks */
+.controller .stick,
+[class*="controller"] [class*="stick"] {
     background-image: url('assets/sticks.svg') !important;
-    background-size: contain;
-    width: 96px;
-    height: 96px;
-    position: absolute;
-    z-index: 10;
-    transition: transform 0.05s linear;
+    background-size: contain !important;
+    width: 96px !important;
+    height: 96px !important;
+    position: absolute !important;
+    z-index: 10 !important;
+    opacity: 1 !important;
+    transition: transform 0.05s linear !important;
 }
 
-.controller.playstation-4 .stick.left {
-    top: 250px;
-    left: 275px;
+.controller .stick.left,
+[class*="controller"] [class*="stick"][class*="left"] {
+    top: 250px !important;
+    left: 275px !important;
 }
 
-.controller.playstation-4 .stick.right {
-    top: 250px;
-    left: 428px;
+.controller .stick.right,
+[class*="controller"] [class*="stick"][class*="right"] {
+    top: 250px !important;
+    left: 428px !important;
 }
 
-.controller.playstation-4 .stick.active {
-    transform: scale(0.92);
-    filter: brightness(1.2) drop-shadow(0 0 8px #ff3700);
+.controller .stick.active,
+[class*="controller"] [class*="stick"].active {
+    transform: scale(0.92) !important;
+    filter: brightness(1.2) drop-shadow(0 0 8px #ff3700) !important;
 }
 
-/* Triggers (Glowing Molten Crimson-Orange) */
-.controller.playstation-4 .trigger {
+/* Force Triggers */
+.controller .trigger,
+[class*="controller"] [class*="trigger"] {
     background-image: url('assets/triggers.svg') !important;
-    background-size: contain;
-    width: 110px;
-    height: 90px;
-    position: absolute;
-    top: 25px;
-    z-index: 2;
-    transition: transform 0.1s ease, filter 0.1s ease;
+    background-size: contain !important;
+    width: 110px !important;
+    height: 90px !important;
+    position: absolute !important;
+    top: 25px !important;
+    z-index: 2 !important;
+    opacity: 1 !important;
+    transition: transform 0.1s ease, filter 0.1s ease !important;
 }
 
-.controller.playstation-4 .trigger.left {
-    left: 170px;
+.controller .trigger.left,
+[class*="controller"] [class*="trigger"][class*="left"] {
+    left: 170px !important;
 }
 
-.controller.playstation-4 .trigger.right {
-    left: 520px;
+.controller .trigger.right,
+[class*="controller"] [class*="trigger"][class*="right"] {
+    left: 520px !important;
 }
 
-/* Triggers activate a fierce, bright orange-red glow matching the image */
-.controller.playstation-4 .trigger.active,
-.controller.playstation-4 .trigger[style*="opacity"] {
-    filter: drop-shadow(0 0 15px #ff3700) brightness(1.6);
-    transform: translateY(4px);
+.controller .trigger.active,
+.controller .trigger[style*="opacity"],
+[class*="controller"] [class*="trigger"].active {
+    filter: drop-shadow(0 0 15px #ff3700) brightness(1.6) !important;
+    transform: translateY(4px) !important;
 }
 
-/* Bumpers (L1/R1) */
-.controller.playstation-4 .bumper {
-    width: 100px;
-    height: 40px;
-    background: #120c18;
-    border: 2px solid #22172d;
-    border-radius: 8px;
-    position: absolute;
-    top: 85px;
-    z-index: 3;
-    transition: background 0.1s ease, filter 0.1s ease;
+/* Force Bumpers (L1/R1) */
+.controller .bumper,
+[class*="controller"] [class*="bumper"] {
+    width: 100px !important;
+    height: 40px !important;
+    background: #120c18 !important;
+    border: 2px solid #22172d !important;
+    border-radius: 8px !important;
+    position: absolute !important;
+    top: 85px !important;
+    z-index: 3 !important;
+    transition: background 0.1s ease, filter 0.1s ease !important;
 }
 
-.controller.playstation-4 .bumper.left {
-    left: 185px;
-    border-top-left-radius: 25px;
+.controller .bumper.left,
+[class*="controller"] [class*="bumper"][class*="left"] {
+    left: 185px !important;
+    border-top-left-radius: 25px !important;
 }
 
-.controller.playstation-4 .bumper.right {
-    left: 515px;
-    border-top-right-radius: 25px;
+.controller .bumper.right,
+[class*="controller"] [class*="bumper"][class*="right"] {
+    left: 515px !important;
+    border-top-right-radius: 25px !important;
 }
 
-.controller.playstation-4 .bumper.active {
+.controller .bumper.active,
+[class*="controller"] [class*="bumper"].active {
     background: #ff3700 !important;
-    filter: drop-shadow(0 0 12px #ff3700);
-    border-color: #ff9000;
+    filter: drop-shadow(0 0 12px #ff3700) !important;
+    border-color: #ff9000 !important;
 }
 
-/* Matte-Black D-Pad */
-.controller.playstation-4 .dpad {
+/* Force D-Pad */
+.controller .dpad,
+[class*="controller"] [class*="dpad"] {
     background-image: url('assets/dpad.svg') !important;
-    background-size: contain;
-    width: 130px;
-    height: 130px;
-    position: absolute;
-    top: 185px;
-    left: 145px;
-    z-index: 6;
+    background-size: contain !important;
+    width: 130px !important;
+    height: 130px !important;
+    position: absolute !important;
+    top: 185px !important;
+    left: 145px !important;
+    z-index: 6 !important;
+    opacity: 1 !important;
 }
 
-/* D-Pad pressed states utilize a hot magenta/orange flash */
-.controller.playstation-4 .dpad .button {
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    opacity: 0;
-    transition: opacity 0.08s ease;
-    background-color: #ff3700;
-    mix-blend-mode: color-dodge;
+.controller .dpad .button,
+[class*="controller"] [class*="dpad"] [class*="button"] {
+    position: absolute !important;
+    width: 38px !important;
+    height: 38px !important;
+    opacity: 0 !important;
+    transition: opacity 0.08s ease !important;
+    background-color: #ff3700 !important;
+    mix-blend-mode: color-dodge !important;
 }
 
-.controller.playstation-4 .dpad .button.up {
-    top: 5px;
-    left: 46px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+.controller .dpad .button.up { top: 5px !important; left: 46px !important; clip-path: polygon(50% 0%, 0% 100%, 100% 100%) !important; }
+.controller .dpad .button.down { bottom: 5px !important; left: 46px !important; clip-path: polygon(50% 100%, 0% 0%, 100% 0%) !important; }
+.controller .dpad .button.left { top: 46px !important; left: 5px !important; clip-path: polygon(0% 50%, 100% 0%, 100% 100%) !important; }
+.controller .dpad .button.right { top: 46px !important; right: 5px !important; clip-path: polygon(100% 50%, 0% 0%, 0% 100%) !important; }
+
+.controller .dpad .button.active,
+[class*="controller"] [class*="dpad"] [class*="button"].active {
+    opacity: 0.9 !important;
+    filter: drop-shadow(0 0 8px #ff3700) !important;
 }
 
-.controller.playstation-4 .dpad .button.down {
-    bottom: 5px;
-    left: 46px;
-    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-}
-
-.controller.playstation-4 .dpad .button.left {
-    top: 46px;
-    left: 5px;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
-}
-
-.controller.playstation-4 .dpad .button.right {
-    top: 46px;
-    right: 5px;
-    clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
-}
-
-.controller.playstation-4 .dpad .button.active {
-    opacity: 0.9;
-    filter: drop-shadow(0 0 8px #ff3700);
-}
-
-/* Translucent Action Buttons */
-.controller.playstation-4 .buttons {
+/* Force Face Buttons */
+.controller .buttons,
+[class*="controller"] [class*="buttons"] {
     background-image: url('assets/buttons.svg') !important;
-    background-size: contain;
-    width: 170px;
-    height: 170px;
-    position: absolute;
-    top: 165px;
-    left: 485px;
-    z-index: 6;
+    background-size: contain !important;
+    width: 170px !important;
+    height: 170px !important;
+    position: absolute !important;
+    top: 165px !important;
+    left: 485px !important;
+    z-index: 6 !important;
+    opacity: 1 !important;
 }
 
-/* Translucent Buttons glow pure white/yellow on press */
-.controller.playstation-4 .buttons .button {
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    opacity: 0;
-    background-color: #ffea00;
-    mix-blend-mode: screen;
-    transition: opacity 0.08s ease, transform 0.08s ease;
+.controller .buttons .button,
+[class*="controller"] [class*="buttons"] [class*="button"] {
+    position: absolute !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    opacity: 0 !important;
+    background-color: #ffea00 !important;
+    mix-blend-mode: screen !important;
+    transition: opacity 0.08s ease, transform 0.08s ease !important;
 }
 
-.controller.playstation-4 .buttons .button.triangle { top: 10px; left: 66px; }
-.controller.playstation-4 .buttons .button.circle { top: 66px; right: 10px; }
-.controller.playstation-4 .buttons .button.cross { bottom: 10px; left: 66px; }
-.controller.playstation-4 .buttons .button.square { top: 66px; left: 10px; }
+.controller .buttons .button.triangle { top: 10px !important; left: 66px !important; }
+.controller .buttons .button.circle { top: 66px !important; right: 10px !important; }
+.controller .buttons .button.cross { bottom: 10px !important; left: 66px !important; }
+.controller .buttons .button.square { top: 66px !important; left: 10px !important; }
 
-.controller.playstation-4 .buttons .button.active {
-    opacity: 0.9;
-    transform: scale(0.9);
-    filter: drop-shadow(0 0 12px #ff9000);
-}
-
-/* Options / Share buttons matching the deep magenta accent */
-.controller.playstation-4 .share,
-.controller.playstation-4 .options {
-    width: 14px;
-    height: 38px;
-    background: #120c18;
-    border: 1.5px solid #800045;
-    border-radius: 4px;
-    position: absolute;
-    top: 140px;
-    z-index: 6;
-    transition: background 0.1s ease, filter 0.1s ease;
-}
-
-.controller.playstation-4 .share { left: 260px; transform: rotate(-15deg); }
-.controller.playstation-4 .options { right: 260px; transform: rotate(15deg); }
-
-.controller.playstation-4 .share.active,
-.controller.playstation-4 .options.active {
-    background: #ff3700;
-    border-color: #ffea00;
-    filter: drop-shadow(0 0 10px #ffea00);
+.controller .buttons .button.active,
+[class*="controller"] [class*="buttons"] [class*="button"].active {
+    opacity: 0.9 !important;
+    transform: scale(0.9) !important;
+    filter: drop-shadow(0 0 12px #ff9000) !important;
 }
