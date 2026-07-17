@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="100%" height="100%">
+  <defs>
+    <!-- Dark Metallic Trigger Gradient -->
+    <linearGradient id="triggerChassis" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241e2b" />
+      <stop offset="100%" stop-color="#0c0a0e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Trigger (L2) -->
+  <g transform="translate(10, 5)">
+    <path d="M 10,10 L 90,10 L 80,85 L 30,85 Z" fill="url(#triggerChassis)" stroke="#050406" stroke-width="2" />
+    <!-- Dynamic glow overlay (activated on press) -->
+    <path class="l2-glow" d="M 15,15 L 85,15 L 77,80 L 33,80 Z" fill="none" stroke="#ff3700" stroke-width="3" opacity="0.1" />
+  </g>
+
+  <!-- Right Trigger (R2) -->
+  <g transform="translate(130, 5)">
+    <path d="M 90,10 L 10,10 L 20,85 L 70,85 Z" fill="url(#triggerChassis)" stroke="#050406" stroke-width="2" />
+    <!-- Dynamic glow overlay (activated on press) -->
+    <path class="r2-glow" d="M 85,15 L 15,15 L 23,80 L 67,80 Z" fill="none" stroke="#ff3700" stroke-width="3" opacity="0.1" />
+  </g>
+</svg>
