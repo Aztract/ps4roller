@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="stickBase" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#211d26" />
+      <stop offset="75%" stop-color="#141117" />
+      <stop offset="100%" stop-color="#09070a" />
+    </radialGradient>
+    <radialGradient id="stickInnerRim" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#2d2933" />
+      <stop offset="90%" stop-color="#141117" />
+      <stop offset="100%" stop-color="#0a080d" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Stick Border -->
+  <circle cx="50" cy="50" r="48" fill="url(#stickBase)" stroke="#09070a" stroke-width="2.5" />
+  
+  <!-- Outer Matte Rim Grid -->
+  <circle cx="50" cy="50" r="37" fill="url(#stickInnerRim)" stroke="#050305" stroke-width="1.5" />
+  
+  <!-- Concave Center Well -->
+  <circle cx="50" cy="50" r="25" fill="#0e0c12" stroke="#1d1924" stroke-width="1" />
+  
+  <!-- Ergonomic Esports Thumb Ribs -->
+  <rect x="48" y="19" width="4" height="5" rx="1.5" fill="#36313d" />
+  <rect x="48" y="76" width="4" height="5" rx="1.5" fill="#36313d" />
+  <rect x="19" y="48" width="5" height="4" rx="1.5" fill="#36313d" />
+  <rect x="76" y="48" width="5" height="4" rx="1.5" fill="#36313d" />
+</svg>
