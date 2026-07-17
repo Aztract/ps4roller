@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <!-- Matte D-Pad Texture -->
+    <linearGradient id="dpadTexture" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211d26" />
+      <stop offset="100%" stop-color="#0c0a0e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Monolithic Matte-Black Cross Base -->
+  <path d="M 60,10 L 100,10 A 5,5 0 0 1 105,15 L 105,55 L 145,55 A 5,5 0 0 1 150,60 L 150,100 A 5,5 0 0 1 145,105 L 105,105 L 105,145 A 5,5 0 0 1 100,150 L 60,150 A 5,5 0 0 1 55,145 L 55,105 L 15,105 A 5,5 0 0 1 10,100 L 10,60 A 5,5 0 0 1 15,55 L 55,55 L 55,15 A 5,5 0 0 1 60,10 Z" fill="url(#dpadTexture)" stroke="#050406" stroke-width="3" />
+
+  <!-- Directional Pointer Triangles -->
+  <polygon points="80,18 73,28 87,28" fill="#4c4257" />
+  <polygon points="142,80 132,73 132,87" fill="#4c4257" />
+  <polygon points="80,142 73,132 87,132" fill="#4c4257" />
+  <polygon points="18,80 28,73 28,87" fill="#4c4257" />
+</svg>
