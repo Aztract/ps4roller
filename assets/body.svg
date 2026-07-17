@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Midnight Base -->
+    <radialGradient id="bgDarkness" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#12021c" />
+      <stop offset="100%" stop-color="#050008" />
+    </radialGradient>
+
+    <!-- Flowing Texture Gradients (Matching the Reference Image Exactly) -->
+    <linearGradient id="purpleFlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#120124" />
+      <stop offset="50%" stop-color="#4d004d" />
+      <stop offset="100%" stop-color="#9a0052" />
+    </linearGradient>
+
+    <linearGradient id="orangeYellowFlow" x1="10%" y1="90%" x2="90%" y2="10%">
+      <stop offset="0%" stop-color="#800045" />
+      <stop offset="40%" stop-color="#ff3700" />
+      <stop offset="80%" stop-color="#ff9000" />
+      <stop offset="100%" stop-color="#ffea00" />
+    </linearGradient>
+
+    <!-- Grip Accents (Fiery Molten Orange) -->
+    <radialGradient id="gripGradient" cx="20%" cy="80%" r="80%">
+      <stop offset="0%" stop-color="#ff3700" stop-opacity="1" />
+      <stop offset="50%" stop-color="#800045" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#111113" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Premium Glossy Reflections -->
+    <linearGradient id="glossOverlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="bottomGloss" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Blur Filter for Soft Outer Aura -->
+    <filter id="neonAura" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- ================= BACKGROUND BASE SHELL ================= -->
+  <!-- Left Grip Base -->
+  <path d="M 120,180 C 80,240 50,340 100,440 C 120,480 180,480 220,440 C 240,420 250,380 260,340 Z" fill="#0b080f" />
+  <!-- Right Grip Base -->
+  <path d="M 680,180 C 720,240 750,340 700,440 C 680,480 620,480 580,440 C 560,420 550,380 540,340 Z" fill="#0b080f" />
+
+  <!-- Active Grip Highlights (Fiery Orange Accents) -->
+  <path d="M 120,180 C 80,240 50,340 100,440 C 110,410 120,300 160,240 Z" fill="url(#gripGradient)" opacity="0.95" />
+  <path d="M 680,180 C 720,240 750,340 700,440 C 690,410 680,300 640,240 Z" fill="url(#gripGradient)" opacity="0.95" transform="translate(1380, 0) scale(-1, 1)" />
+
+  <!-- Main Chassis Structural Body -->
+  <path d="M 220,150 C 300,120 500,120 580,150 C 640,175 660,220 660,280 C 660,340 580,380 550,380 C 510,380 470,360 400,360 C 330,360 290,380 250,380 C 220,380 140,340 140,280 C 140,220 160,175 220,150 Z" fill="url(#bgDarkness)" />
+
+  <!-- ================= MOLTEN FLOWING TEXTURES (LAYERED SHAPES) ================= -->
+  <g opacity="0.85">
+    <!-- Deep Purple Swirling Wave (Left Side) -->
+    <path d="M 220,150 C 280,160 290,260 250,350 C 210,380 140,340 140,280 C 140,220 160,175 220,150 Z" fill="url(#purpleFlow)" />
+    
+    <!-- Bright Orange/Yellow Flowing Ribbon (S-Curve Sweeping Through Center) -->
+    <path d="M 320,135 C 420,140 340,300 440,360 C 380,360 290,380 250,380 C 270,300 270,180 320,135 Z" fill="url(#orangeYellowFlow)" />
+    
+    <!-- Right side deep purple overlay to balance flow -->
+    <path d="M 580,150 C 520,160 510,260 550,350 C 590,380 660,340 660,280 C 660,220 640,175 580,150 Z" fill="url(#purpleFlow)" />
+
+    <!-- Secondary Bright Molten Flame Wave (Screaming Yellow Highlights) -->
+    <path d="M 450,130 C 500,135 480,240 560,330 C 520,360 480,360 400,360 C 440,280 400,180 450,130 Z" fill="url(#orangeYellowFlow)" opacity="0.9" />
+  </g>
+
+  <!-- ================= GLOWS & ACCENTS ================= -->
+  <!-- Soft Outer Controller Boundary Glow (Infusing Crimson Aura) -->
+  <path d="M 220,150 C 300,120 500,120 580,150 C 640,175 660,220 660,280 C 660,340 580,380 550,380 C 510,380 470,360 400,360 C 330,360 290,380 250,380 C 220,380 140,340 140,280 C 140,220 160,175 220,150 Z" 
+        fill="none" stroke="#ff3700" stroke-width="3" opacity="0.45" filter="url(#neonAura)" />
+
+  <!-- Inner Pinstripe Accents outlining the dynamic panels -->
+  <path d="M 240,170 C 300,150 500,150 560,170" fill="none" stroke="#ffea00" stroke-width="1" opacity="0.3" />
+
+  <!-- ================= FINISH OVERLAYS ================= -->
+  <!-- Upper Gloss Surface Reflection for 3D Shell Look -->
+  <path d="M 225,155 C 300,130 500,130 575,155 C 620,175 630,220 630,250 C 500,200 300,200 170,250 C 170,220 180,175 225,155 Z" fill="url(#glossOverlay)" />
+
+  <!-- Lower Grip Shadow/Gloss definitions -->
+  <path d="M 100,440 C 120,480 180,480 220,440 C 230,430 240,400 245,370 C 190,400 130,410 100,440 Z" fill="url(#bottomGloss)" />
+  <path d="M 700,440 C 680,480 620,480 580,440 C 570,430 560,400 555,370 C 610,400 670,410 700,440 Z" fill="url(#bottomGloss)" />
+</svg>
